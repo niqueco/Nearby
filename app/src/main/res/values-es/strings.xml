@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Alrededor</string>
+	<string name="action_settings">Preferencias</string>
+	<string name="cat_restaurant">Restaurantes</string>
+	<string name="cat_bank">Bancos</string>
+	<string name="cat_market">Mercados</string>
+	<string name="cat_entertainment">Entretenimiento</string>
+	<string name="cat_other">Otros</string>
+	<string name="things">%d cosas.</string>
+	<string name="title_place_detail">Detalle de lugar</string>
+	<string name="title_place_list">Categoría</string>
+</resources>

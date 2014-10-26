@@ -1,0 +1,10 @@
+(
+	way (around:$radius,$latitude, $longitude)
+	[~"amenity|shop|leisure"~"."];
+	node (around:$radius,$latitude, $longitude)
+	[~"amenity|shop|leisure"~"."];
+	rel (around:$radius,$latitude, $longitude)
+	[~"amenity|shop|leisure"~"."];
+);
+(._;>;);
+out;
