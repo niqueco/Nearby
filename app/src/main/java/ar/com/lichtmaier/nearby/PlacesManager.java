@@ -25,6 +25,10 @@ public class PlacesManager
 
 	private static String queryTemplate;
 	private static Pattern pattern;
+
+	private static Map<Category, Collection<Element>> lastResult;
+	private static double lastLatitude = Double.NaN, lastLongitude = Double.NaN;
+
 	private static synchronized String getQuery(Context ctx, int radius, double latitude, double longitude) throws IOException
 	{
 		if(queryTemplate == null)
@@ -61,6 +65,12 @@ public class PlacesManager
 
 	public static Map<Category, Collection<Element>> around(Context ctx, final Location loc)
 	{
+		double latitude = loc.getLatitude();
+		double longitude = loc.getLongitude();
+
+		if(latitude == lastLatitude && longitude == lastLongitude)
+			return lastResult;
+
 		InputStream s = null;
 		try
 		{
@@ -70,7 +80,7 @@ public class PlacesManager
 			pf.setNamespaceAware(false);
 			XmlPullParser parser = pf.newPullParser();
 
-			URL url = new URL(" http://overpass-api.de/api/interpreter?data=" + URLEncoder.encode(getQuery(ctx, 1000, loc.getLatitude(), loc.getLongitude()), "UTF-8"));
+			URL url = new URL(" http://overpass-api.de/api/interpreter?data=" + URLEncoder.encode(getQuery(ctx, 1000, latitude, longitude), "UTF-8"));
 			s = url.openStream();
 			parser.setInput(s, null);
 
@@ -164,6 +174,9 @@ public class PlacesManager
 				}
 				l.add(element);
 			}
+			lastResult = pp;
+			lastLatitude = latitude;
+			lastLongitude = longitude;
 			return pp;
 		} catch(XmlPullParserException|IOException e)
 		{
