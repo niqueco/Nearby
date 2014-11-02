@@ -9,11 +9,14 @@ import org.gavaghan.geodesy.GlobalCoordinates;
 import java.util.HashMap;
 import java.util.Map;
 
+import ar.com.lichtmaier.nearby.PlaceType;
+
 abstract public class Element
 {
 	final public long id;
 
 	private Map<String, String> tags;
+	public PlaceType type;
 
 	public Element(long id)
 	{
@@ -35,6 +38,21 @@ abstract public class Element
 	public boolean hasTag(String tag)
 	{
 		return tags != null && tags.containsKey(tag);
+	}
+
+	public String dumpTags()
+	{
+		StringBuilder sb = new StringBuilder();
+		boolean first = true;
+		for(Map.Entry<String, String> e : tags.entrySet())
+		{
+			if(first)
+				first = false;
+			else
+				sb.append('\n');
+			sb.append(e.getKey()).append('=').append(e.getValue());
+		}
+		return sb.toString();
 	}
 
 	public abstract void getBoundingBox(Location[] bb);

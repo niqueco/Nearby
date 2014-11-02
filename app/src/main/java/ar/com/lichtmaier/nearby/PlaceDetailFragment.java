@@ -56,7 +56,23 @@ public class PlaceDetailFragment extends Fragment
 
 		if(mItem != null)
 		{
-			((TextView) rootView.findViewById(R.id.place_detail)).setText(mItem.toString());
+			((TextView) rootView.findViewById(R.id.place_title)).setText(mItem.toString());
+			if(mItem.type != null)
+				((TextView) rootView.findViewById(R.id.place_subtitle)).setText(mItem.type.description);
+
+			StringBuilder description = new StringBuilder();
+
+			String value = mItem.getTag("addr:street");
+			if(value != null)
+			{
+				description.append(value.replaceAll(";.*$", ""));
+				value = mItem.getTag("addr:housenumber");
+				if(value != null)
+					description.append(' ').append(value);
+				description.append('\n');
+			}
+			description.append('\n').append(mItem.dumpTags());
+			((TextView) rootView.findViewById(R.id.place_description)).setText(description);
 		}
 
 		return rootView;

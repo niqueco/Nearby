@@ -1,9 +1,31 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/place_detail"
-    style="?android:attr/textAppearanceLarge"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:textIsSelectable="true"
-    tools:context="ar.com.lichtmaier.nearby.PlaceDetailFragment" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      xmlns:tools="http://schemas.android.com/tools"
+	      android:layout_width="match_parent"
+	      android:layout_height="match_parent"
+	      tools:context="ar.com.lichtmaier.nearby.PlaceDetailFragment"
+	      android:padding="16dp"
+	      android:orientation="vertical">
+
+	<TextView
+		android:id="@+id/place_title"
+		style="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textIsSelectable="true"/>
+
+	<TextView
+		android:id="@+id/place_subtitle"
+		style="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textIsSelectable="true"/>
+
+	<TextView
+		android:id="@+id/place_description"
+		style="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="30dp"
+		android:textIsSelectable="true"/>
+
+</LinearLayout>

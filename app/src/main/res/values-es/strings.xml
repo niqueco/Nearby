@@ -2,7 +2,7 @@
 <resources>
 	<string name="app_name">Alrededor</string>
 	<string name="action_settings">Preferencias</string>
-	<string name="cat_restaurant">Restaurantes</string>
+	<string name="cat_eat_and_drink">Comer y tomar</string>
 	<string name="cat_bank">Bancos</string>
 	<string name="cat_market">Mercados</string>
 	<string name="cat_entertainment">Entretenimiento</string>
@@ -10,4 +10,14 @@
 	<string name="things">%d cosas.</string>
 	<string name="title_place_detail">Detalle de lugar</string>
 	<string name="title_place_list">Categoría</string>
+	<string name="type_bank">banco</string>
+	<string name="type_cafe">café</string>
+	<string name="type_casino">casino</string>
+	<string name="type_cinema">cine</string>
+	<string name="type_fast_food">comidas rápidas</string>
+	<string name="type_ice_cream">heladería</string>
+	<string name="type_pub">pub</string>
+	<string name="type_restaurant">restaurante</string>
+	<string name="type_supermarket">supermercado</string>
+	<string name="type_theatre">teatro</string>
 </resources>

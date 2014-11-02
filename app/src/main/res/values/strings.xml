@@ -2,7 +2,7 @@
 <resources>
 	<string name="app_name">Nearby</string>
 	<string name="action_settings">Settings</string>
-	<string name="cat_restaurant">Restaurants</string>
+	<string name="cat_eat_and_drink">Eat &amp; drink</string>
 	<string name="cat_bank">Banks</string>
 	<string name="cat_market">Markets</string>
 	<string name="cat_entertainment">Entertainment</string>
@@ -10,4 +10,14 @@
 	<string name="things">%d things.</string>
 	<string name="title_place_list">Category</string>
 	<string name="title_place_detail">Place Detail</string>
+	<string name="type_bank">bank</string>
+	<string name="type_cafe">cafe</string>
+	<string name="type_casino">casino</string>
+	<string name="type_cinema">cinema</string>
+	<string name="type_fast_food">fast food</string>
+	<string name="type_ice_cream">ice creams</string>
+	<string name="type_pub">pub</string>
+	<string name="type_restaurant">restaurant</string>
+	<string name="type_supermarket">supermarket</string>
+	<string name="type_theatre">theatre</string>
 </resources>

@@ -165,6 +165,11 @@ public class PlacesManager
 			Map<Category,Collection<Element>> pp = new HashMap<>();
 			for(Element element : places)
 			{
+				for(PlaceType pt : PlaceType.values())
+				{
+					if(pt.belongs(element))
+						element.type = pt;
+				}
 				Category category = getElementCategory(element);
 				Collection<Element> l = pp.get(category);
 				if(l == null)
@@ -189,26 +194,12 @@ public class PlacesManager
 
 	static Category getElementCategory(Element element)
 	{
-		String v = element.getTag("amenity");
-		if (v != null) switch(v)
-		{
-			case "restaurant":
-			case "cafe":
-			case "fast_food":
-			case "ice_cream":
-			case "pub":
-				return Category.RESTAURANT;
-			case "bank":
-				return Category.BANK;
-			case "theatre":
-			case "cinema":
-			case "casino":
-				return Category.ENTERTAINMENT;
-		}
+		if(element.type != null)
+			return element.type.category;
+		String v;
 		v = element.getTag("shop");
 		if (v != null) switch(v)
 		{
-			case "supermarket":
 			case "convenience":
 				return Category.MARKET;
 		}
