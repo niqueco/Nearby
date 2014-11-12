@@ -71,7 +71,16 @@ public class PlaceDetailFragment extends Fragment
 					description.append(' ').append(value);
 				description.append('\n');
 			}
-			description.append('\n').append(mItem.dumpTags());
+			boolean first = true;
+			for(String info : mItem.getInformations(getActivity()))
+			{
+				if(first)
+					first = false;
+				else
+					description.append("; ");
+				description.append(info);
+			}
+			description.append("\n\n").append(mItem.dumpTags());
 			((TextView) rootView.findViewById(R.id.place_description)).setText(description);
 		}
 

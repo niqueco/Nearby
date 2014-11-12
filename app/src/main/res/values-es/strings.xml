@@ -20,4 +20,20 @@
 	<string name="type_restaurant">restaurante</string>
 	<string name="type_supermarket">supermercado</string>
 	<string name="type_theatre">teatro</string>
+	<string name="cuisine_chinese">china</string>
+	<string name="cuisine_french">francesa</string>
+	<string name="cuisine_indian">india</string>
+	<string name="cuisine_italian">italiana</string>
+	<string name="cuisine_japanese">japonesa</string>
+	<string name="cuisine_kebab">kebab</string>
+	<string name="cuisine_mexican">mexicana</string>
+	<string name="cuisine_pizza">pizza</string>
+	<string name="cuisine_sandwich">sandwiches</string>
+	<string name="cuisine_sushi">sushi</string>
+	<string name="cuisine_thai">tailandesa</string>
+	<string name="cuisine">tipo de comida</string>
+	<string name="free_wifi_available">WiFi gratis</string>
+	<string name="internet_available">Internet</string>
+	<string name="paid_wifi_available">WiFi (pago)</string>
+	<string name="wifi_available">WiFi disponible</string>
 </resources>
