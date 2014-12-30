@@ -80,7 +80,7 @@ public class PlacesManager
 			pf.setNamespaceAware(false);
 			XmlPullParser parser = pf.newPullParser();
 
-			URL url = new URL(" http://overpass-api.de/api/interpreter?data=" + URLEncoder.encode(getQuery(ctx, 1000, latitude, longitude), "UTF-8"));
+			URL url = new URL("http://overpass-api.de/api/interpreter?data=" + URLEncoder.encode(getQuery(ctx, 1000, latitude, longitude), "UTF-8"));
 			s = url.openStream();
 			parser.setInput(s, null);
 
